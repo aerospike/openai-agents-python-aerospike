@@ -10,14 +10,14 @@ updates:
 
   # Add additional package ecosystems as needed for your project
   # Python dependencies (uncomment if using Python)
-  # - package-ecosystem: "pip"
-  #   directory: "/"
-  #   schedule:
-  #     interval: "weekly"
-  #   open-pull-requests-limit: 10
-  #   labels:
-  #     - "dependencies"
-  #     - "python"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "python"
 
   # Node.js dependencies (uncomment if using npm)
   # - package-ecosystem: "npm"

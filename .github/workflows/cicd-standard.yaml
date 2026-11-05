@@ -9,10 +9,6 @@
 #   Choose this if you want a single workflow call that handles everything.
 #   You provide a build script and configuration; the orchestrator does the rest.
 #
-# WHEN TO USE cicd-composable.yaml INSTEAD:
-#   Choose composable if you need custom steps between pipeline stages
-#   (e.g., integration tests after build but before signing).
-#
 # GETTING STARTED:
 #   1. Replace the triggers and no-op job below with the commented-out pipeline
 #   2. Replace the dummy build-script with your actual build commands
@@ -97,12 +93,12 @@ jobs:
 #     uses: aerospike/shared-workflows/.github/workflows/reusable_artifacts-cicd.yaml@7f633569d89f706899e6b8f2151a3b200576c1fd # v3.1.1
 #     with:
 #       gh-workflows-ref: 7f633569d89f706899e6b8f2151a3b200576c1fd # v3.1.1
-#       jf-project: Connect
+#       jf-project: connect
 #       jf-build-name: openai-agents-python-aerospike
 #       version: ${{ needs.extract-version.outputs.version }}
 #       gh-artifact-directory: dist
-#       oidc-provider-name: gh-dev-test
-#       oidc-audience: aerospike/testing
+#       oidc-provider-name: gh-aerospike
+#       oidc-audience: aerospike
 #       dry-run: ${{ github.event_name == 'pull_request' }}
 #       build-script: |
 #         set -euo pipefail
